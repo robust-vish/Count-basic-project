@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <button id="increase">increase</button>
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <br><br>
+    <div id="text" style="text-align: center;font-size: 50px;" id="count"></div>
+</body>
+<script>
+    let count=0;
+    let increaseButton=document.getElementById('increase');
+    let decreaseButton=document.getElementById('decrease');
+    let text=document.getElementById('text');
+    let resetButton=document.getElementById('reset');
+
+    text.innerHTML=count;
+    function incrementLogic(){
+          if(count==10){
+             alert("count become 10 !, please reset")
+          }
+          else{
+            count++;
+            text.innerHTML=count;
+          }
+    }
+
+
+    increaseButton.addEventListener('click',incrementLogic)
+    function decrementLogic(){
+        if(count==0){
+            alert("count is 0, you can only increment or reset to 0")
+        }
+        else{
+            count--;
+            text.innerHTML=count;
+        }
+    }
+    
+
+     decreaseButton.addEventListener('click',decrementLogic)
+     function resetLogic(){
+        count=0;
+        text.innerHTML=count;
+     }
+
+     resetButton.addEventListener('click',resetLogic)
+
+
+
+</script>
+</html>
