@@ -7,6 +7,8 @@ function mappu() {
 }  
 
 console.log("zingalalahu");
+console.log("good will");
+
 
 
 export default mappu
