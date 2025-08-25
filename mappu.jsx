@@ -5,5 +5,7 @@ function mappu() {
     <div>mappu</div>
   )
 }
+console.log("madoyovesh");
+
 
 export default mappu
